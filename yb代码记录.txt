@@ -1,0 +1,13 @@
+sql操作数据库生成customer表：
+CREATE TABLE customer(
+	id VARCHAR(100) PRIMARY KEY,
+	name VARCHAR(100),
+	gender VARCHAR(10),	#1 male   0 female
+	birthday DATE,
+	telephone VARCHAR(20),
+	email VARCHAR(10),
+	hobby VARCHAR(100),
+	type VARCHAR(40), #vip|normal
+	description VARCHAR(255)
+);
+
