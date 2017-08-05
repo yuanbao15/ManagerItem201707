@@ -34,13 +34,13 @@ public class CustomerDaoImpl implements CustomerDao {
 		int n = 0;
 		try {
 			pstmt = conn.prepareStatement("insert into customer(id,name,gender,"
-					+ "birthday,telephone,email,hobby,type,description) value(?,?,?,?,?,?,?,?,?)");
+					+ "birthday,telephone,email,hobby,type,description) values(?,?,?,?,?,?,?,?,?)");
 			//这里的sql代码马虎犯错害死人，value写错直接就跪了。。。
 			//指定？的值
 			pstmt.setString(1, customer.getId());
 			pstmt.setString(2, customer.getName());
 			pstmt.setString(3, customer.getGender()); 
-			pstmt.setDate(4, new java.sql.Date(customer.getBirthday().getTime()));	//util.Date转化为sql.Date
+			pstmt.setString(4, customer.getBirthday());	
 			pstmt.setString(5, customer.getTelephone());
 			pstmt.setString(6, customer.getEmail());
 			pstmt.setString(7, customer.getHobby());
@@ -76,7 +76,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			//指定？的值
 			pstmt.setString(1, customer.getName());
 			pstmt.setString(2, customer.getGender()); 
-			pstmt.setDate(3, new java.sql.Date(customer.getBirthday().getTime()));	//util.Date转化为sql.Date
+			pstmt.setString(3, customer.getBirthday());
 			pstmt.setString(4, customer.getTelephone());
 			pstmt.setString(5, customer.getEmail());
 			pstmt.setString(6, customer.getHobby());
@@ -145,7 +145,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				}
 				c.setName(rs.getString("name"));
 				c.setGender(rs.getString("gender"));
-				c.setBirthday(rs.getDate("birthday"));
+				c.setBirthday(rs.getString("birthday"));
 				c.setTelephone(rs.getString("telephone"));
 				c.setEmail(rs.getString("email"));
 				c.setHobby(rs.getString("hobby"));
@@ -181,7 +181,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				c.setId(rs.getString("id"));
 				c.setName(rs.getString("name"));
 				c.setGender(rs.getString("gender"));
-				c.setBirthday(rs.getDate("birthday"));
+				c.setBirthday(rs.getString("birthday"));
 				c.setTelephone(rs.getString("telephone"));
 				c.setEmail(rs.getString("email"));
 				c.setHobby(rs.getString("hobby"));

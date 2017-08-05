@@ -15,7 +15,7 @@
 		<title>yb's index.jsp</title>
 	</head>
 	
-	<body><!-- 访问项目的话直接打开op=all操作的页面即list.jsp -->
+	<body>
 		<jsp:forward page="/servlet/Controller?op=all"></jsp:forward>
 	</body> 
 	

@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>
 	
 	<body>
-		<h1 align="center">用户信息管理页面</h1>
+		<h1 align="center">元宝--通讯录管理中心</h1>
 		<hr>	<!-- hr为创建水平线 -->
 		<table id="t1" align="center">
 			<tr>	<!-- 行 -->

@@ -61,19 +61,22 @@ public class Test {
 		 */
 		CustomerDao dao = new CustomerDaoImpl() ;
 		
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 5; i++) {
 			Customer c = new Customer() ;
 			c.setId(WebTools.createNewId());
-			c.setName("元宝" + (i+1)) ;
+			c.setName("元宝山" + (i+1)) ;
 			c.setTelephone(i + "1") ;
-			c.setBirthday(new java.sql.Date(new Date().getTime())) ;
-			c.setEmail("") ;
-			c.setGender("1") ;
+//			c.setBirthday(new java.sql.Date(new Date().getTime())) ;
+			c.setBirthday("2007-07-07") ;
+			c.setEmail("@qq.com") ;
+			c.setGender("男") ;
 			c.setHobby("吃放,睡觉") ;
 			c.setType("vip") ;
 			c.setDescription("哈哈哈哈") ;
 			
 			dao.add(c) ;
+			
+			System.out.println("添加多行数据完成");		//传数据到本地localhost没问题，但传到云服务器上是失败的，不知道是哪儿的问题。
 		}
 		
 	}

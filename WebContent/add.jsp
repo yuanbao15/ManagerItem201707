@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/Birthday-Calendar.js"></script>
-		<title>Insert title here</title>
+		<title>yb insert page</title>
 		
 		<!-- yb写css -->
 		<style type="text/css">	

@@ -10,20 +10,20 @@ import java.util.Date;
 	id VARCHAR(100) PRIMARY KEY,
 	NAME VARCHAR(100),
 	gender VARCHAR(10),	#1 male   0 female
-	birthday DATE,
+	birthday varchar(20),
 	telephone VARCHAR(20),
-	email VARCHAR(10),
+	email VARCHAR(20),
 	hobby VARCHAR(100),
 	TYPE VARCHAR(40), #vip|normal
 	description VARCHAR(255)
-);
+   );
  */
 public class Customer implements Serializable{
 	
 	private String id;
 	private String name;
 	private String gender;
-	private Date birthday;	//注意是Date类，其他实现时都要是setDate
+	private String birthday;	//注意是Date类，其他实现时都要是setDate
 	private String telephone;
 	private String email;
 	private String hobby;
@@ -48,10 +48,10 @@ public class Customer implements Serializable{
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public Date getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
-	public void setBirthday(Date birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 	public String getTelephone() {

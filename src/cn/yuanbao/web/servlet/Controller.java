@@ -112,8 +112,8 @@ public class Controller extends HttpServlet {
 		//检测数据。。省略。。
 		//拷贝数据到一个javabean中
 		Customer c = new Customer();
-		//时间是date类型需要先注册一个时间转换器
-		ConvertUtils.register(new DateLocaleConverter(), Date.class);
+//		//时间是date类型需要先注册一个时间转换器
+//		ConvertUtils.register(new DateLocaleConverter(), Date.class);
 		//拷贝数据
 		try {
 			BeanUtils.copyProperties(c, cfb);
